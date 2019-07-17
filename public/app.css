@@ -78,8 +78,26 @@ li span{
     color: #c0392b;
     transition: all 0.3s;
     opacity: 0;
+    user-select: none;
 }
 
 li span:hover{
     color: #e74c3c;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #2c3e50;
+}
+
+::-webkit-scrollbar-track{
+    backgrond-color: #bdc3c7;
+}
+
+::selection{
+    color: aliceblue;   
+    background-color: #2c3e50;
 }
