@@ -40,10 +40,11 @@ header h2{
     font: 300 28px 'Montserrat', sans-serif;
     padding-left: 20px;   
     color: #34495e;
+    margin-left: 30px;
 }
 
 .list{
-    width: 800px;
+    width: 800px;   
     margin: 0 auto;
 }
 
@@ -59,7 +60,8 @@ header h2{
 
 .task:hover{
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(158, 158, 158, 0.185);
+    border-radius: 8px;
 }
 
 .task:hover span{
