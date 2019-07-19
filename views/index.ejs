@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Questrial|Raleway" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="/css/landing.css">
-    <title>Today - Sign In or Sign Up</title>
+    <title>zentodo</title>
 </head>
 <body>          
     <header>
@@ -18,12 +18,36 @@
     </header>
 
     <section id="auth">
-        <form action="/login">
-            <button href="/login" id="loginBtn">Sign <span>In</span></button>
+        <button href="/login" id="mainSigninBtn" class="authBtn signinBtn">Sign <span>In</span></button>
+
+        <form action="/login" method="POST" id="loginForm" class="form">
+            <div>        
+                <input type="text" placeholder="Username" class="authField" name="username">
+            </div>
+            <div>
+                <input type="password" placeholder="Password" name="password" class="authField" id="password">
+            </div>
+            <button class="authBtn filled">Login</button>
         </form>
-        <p id="signupBtn">Not a member? <a href="/register">Join Now</a></p>
+
+        <form action="/register" method="POST" id="registerForm" class="form">
+            <div>        
+                <input type="text" placeholder="Username" class="authField" name="regUsername">
+            </div>
+            <div>
+                <input type="password" placeholder="Password" name="regPassword" id="regPassword" class="authField">
+            </div>
+            <div>
+                <input type="password" placeholder="Confirm Password" name="confirmpassword" class="authField">
+            </div>
+            <button class="authBtn filled">Sign Up</button>
+        </form>
+
+        <p class="altOption" id="option-signup">Not a member? <a id="altOptionSignup" class="altOptionBtn">Join Now</a></p>
+        <p class="altOption" id="option-signin">Already a member? <a id="altOptionlogin" class="altOptionBtn signinBtn">Sign In</a></p>
     </section>
     
+
     <footer>  
         <nav>
             <li class="nav-item"><a href="" class="nav-link">About</a></li>
@@ -33,4 +57,6 @@
         </nav>
     </footer>
 </body>
+    <script src="/js/jQuery.3.1.1.min.js"></script>
+    <script src="/js/toggle.js"></script>
 </html>

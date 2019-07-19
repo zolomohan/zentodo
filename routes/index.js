@@ -17,21 +17,14 @@ router.get("/home", isLoggedIn ,function(req, res){
     })
 })
 
-router.get("/login", function(req, res){
-    res.render("login")
-})
-
-router.get("/register", function(req, res){
-    res.render("register")
-})
-
 router.post("/register", function(req, res){
     db.User.register(new db.User({
-        username: req.body.username
-    }), req.body.password, function(error, user){
+        username: req.body.regUsername
+    }), req.body.regPassword, function(error, user){
+        console.log(req.body.regPassword);
         if(error) {
             console.log(error);
-            res.redirect("/register");
+            res.redirect("/");
         }
         else{
             passport.authenticate("local")(req, res, function(){
@@ -43,7 +36,7 @@ router.post("/register", function(req, res){
 
 router.post("/login", passport.authenticate("local", { 
     successRedirect: "/home", 
-    failureRedirect: "/login"
+    failureRedirect: "/"
 }), function(req, res){});
 
 router.get("/logout", function(req, res){

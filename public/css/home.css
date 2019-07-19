@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300i,400,700&display=swap');
 
+body{
+    overflow: hidden;
+}
+
 .form{
-    width: 800px;
+    max-width: 900px;
+    width: 90%;
     margin: 50px auto 20px;
 }
 
 #todoInput{
-    width: 100%;
+    width: 99%;
     height: 60px;
     background: none;
     border: none;
@@ -15,11 +20,12 @@
     font: 300 28px 'Montserrat', sans-serif;
     padding-left: 20px;   
     color: #34495e;
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 
 .list{
-    width: 800px;   
+    max-width: 900px;
+    width: 90%; 
     margin: 0 auto;
 }
 
@@ -35,7 +41,7 @@
 
 .task:hover{
     cursor: pointer;
-    background-color: rgba(158, 158, 158, 0.185);
+    background-color: rgba(158, 158, 158, 0.096);
     border-radius: 8px;
 }
 
