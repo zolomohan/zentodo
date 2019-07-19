@@ -5,14 +5,14 @@ let express = require('express'),
     router = express.Router();
     
 router.get("/", function(req, res){
-    res.render("landing");
+    res.render("index");
 })
 
 router.get("/home", isLoggedIn ,function(req, res){
     db.User.findById(req.user).populate('todos').exec(function(error, user){
         if(error) console.log(error)
         else{
-            res.render('index', {user: user})
+            res.render('home', {user: user})
         }
     })
 })
