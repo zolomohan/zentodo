@@ -4,20 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>zentodo</title>
-    <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="landing.css">
+    <meta name="keywords" content="todo, organize, tasks">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Questrial|Raleway" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="/css/landing.css">
+    <title>Today - Sign In or Sign Up</title>
 </head>
-<body>
+<body>          
     <header>
-        <h1>zen<span>todo</span></h1>
-        <h2>A Simple Todo List</h2>
+        <h1 id="moto">zen<span>todo</span></h1>
+        <p id="help">From work to play, don't forget anything today.</p>
     </header>
-    <div id="btns">
-    <a href="/login" class="authBtn">log<span>in</span></a>
-    <a href="/register" class="authBtn">sign<span>up</span> </a>
-    </div>
+
+    <section id="auth">
+        <form action="/login">
+            <button href="/login" id="loginBtn">Sign <span>In</span></button>
+        </form>
+        <p id="signupBtn">Not a member? <a href="/register">Join Now</a></p>
+    </section>
+    
+    <footer>  
+        <nav>
+            <li class="nav-item"><a href="" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="" class="nav-link" data-toggle="modal" data-target="#data-policy">Data Policy</a></li>
+            <li class="nav-item"><a href="" class="nav-link" data-toggle="modal" data-target="#cookies-policy">Cookies Policy</a></li>
+            <li class="nav-item"><a href="" class="nav-link" data-toggle="modal" data-target="#terms">Terms</a></li>
+        </nav>
+    </footer>
 </body>
-<script src="jQuery.3.1.1.min.js"></script>
-<script src="app.js"></script>
 </html>
