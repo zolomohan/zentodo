@@ -13,7 +13,15 @@ exports.getAllTodos = function(req, res){
 exports.createTodo = function(req, res){
     db.Todo.create(req.body)
     .then(function(todo){
-        res.status(201).json(todo);
+        db.User.findById(req.user.id)
+        .then(function(user){
+            user.todos.push(todo.id);
+            user.save();
+            res.status(201).json(todo);
+        })
+        .catch(function(error){
+            console.log(error);
+        })
     })
     .catch(function(error){
         res.send(error);
@@ -45,7 +53,15 @@ exports.updateTodo = function(req, res){
 exports.deleteTodo = function(req, res){
     db.Todo.findByIdAndRemove(req.params.todoid)
     .then(function(){
-        res.json({message: "Todo Deleted"})
+        db.User.findById(req.user.id)
+        .then(function(user){
+            user.todos.splice(user.todos.indexOf(req.params.id), 1);
+            user.save();
+            res.json({message: "Todo Deleted"})
+        })
+        .catch(function(error){
+            console.log(error);
+        })
     })
     .catch(function(error){
         res.send(error);

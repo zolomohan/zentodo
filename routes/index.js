@@ -9,7 +9,12 @@ router.get("/", function(req, res){
 })
 
 router.get("/home", isLoggedIn ,function(req, res){
-    res.render('index')
+    db.User.findById(req.user).populate('todos').exec(function(error, user){
+        if(error) console.log(error)
+        else{
+            res.render('index', {user: user})
+        }
+    })
 })
 
 router.get("/login", function(req, res){

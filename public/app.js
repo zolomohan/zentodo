@@ -1,7 +1,4 @@
 $(document).ready(function(){
-    $.getJSON("/api/todos")
-    .then(addTodos)
-
     $('#todoInput').keypress(function(event){
         if(event.which == 13) createTodo();
     })
@@ -17,20 +14,13 @@ $(document).ready(function(){
 })
 
 function addTodo(todo){
-    let newTodo =  $('<li class="task">' + todo.todo + '<span>x</span></li>');
-    newTodo.data("id", todo._id);
+    let newTodo =  $('<li class="task" id='+todo._id+'>' + todo.todo + '<span>x</span></li>');
     newTodo.data("completed", todo.completed);
     if(todo.completed) newTodo.addClass('done');
     $('.list').append(newTodo)
 }
 
-function addTodos (todos){
-    todos.forEach(function(todo){
-        addTodo(todo);
-    })
-}
-
-function createTodo (){
+function createTodo(){
     $.post('/api/todos', {todo: $('#todoInput').val()})
     .then(function(todo){
         addTodo(todo);
@@ -44,7 +34,7 @@ function createTodo (){
 function removeTodo(todo){
     $.ajax({
         method: 'DELETE',
-        url: '/api/todos/'+todo.data('id'),
+        url: '/api/todos/'+todo.attr('id'),
     })
     .then(function(){
         todo.remove(); 
@@ -55,15 +45,14 @@ function removeTodo(todo){
 }
 
 function toggleTodo(todo){
-    var isDone = !todo.data('completed');
+    var isDone = !todo.hasClass('done');
     var updateData = {completed: isDone};
     $.ajax({
         method: 'PUT',
-        url: '/api/todos/'+todo.data('id'),
+        url: '/api/todos/'+todo.attr('id'),
         data: updateData
     })
     .then(function(){
-        todo.data('completed', isDone);
         todo.toggleClass('done');
     })
     .catch(function(error){
