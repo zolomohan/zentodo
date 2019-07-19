@@ -2,15 +2,7 @@
 
 body{
     transition: background 0.5s;
-    -webkit-transition: background 0.5s;
-    -moz-transition: background 0.5s;
-    -ms-transition: background 0.5s;
-    -o-transition: background 0.5s;
     transition: margin 1s;
-    -webkit-transition: margin 1s;
-    -moz-transition: margin 1s;;
-    -ms-transition: margin 1s;
-    -o-transition: margin 1s;
     overflow: hidden;
     margin: 0 5%;
     font-family: 'Montserrat', sans-serif; 
@@ -34,9 +26,6 @@ header h1{
     margin-bottom: 0;
     transition: font 0.5s;
     -webkit-transition: font 0.5s;  
-    -moz-transition: font 0.5s;  
-    -ms-transition: font 0.5s;  
-    -o-transition: font 0.5s;  
     font-size: 98px;
 }
 
@@ -48,10 +37,6 @@ header h1 span{
     color: #7b7e81;
     font-size: 21px;
     transition: font 0.5s;
-    -webkit-transition: font 0.5s;  
-    -moz-transition: font 0.5s;  
-    -ms-transition: font 0.5s;  
-    -o-transition: font 0.5s;  
 }
 
 #auth{
@@ -77,15 +62,8 @@ header h1 span{
     border: 2px solid #2c3e50;
     border-radius: 7px;
     transition: background-color 0.5s;
-    -webkit-transition: background-color 0.5s;  
-    -moz-transition: background-color 0.5s;  
-    -ms-transition: background-color 0.5s;  
-    -o-transition: background-color 0.5s;
-    -webkit-transition: margin 1s;
-    -moz-transition: margin 1s;;
-    -ms-transition: margin 1s;
-    -o-transition: margin 1s;
-    margin-top: 1%;
+    transition: margin 1s;
+    margin-top: 1%
 }
 
 .authBtn:hover{
@@ -100,10 +78,6 @@ header h1 span{
 
 .option{
     transition: margin 1s;
-    -webkit-transition: margin 1s;
-    -moz-transition: margin 1s;;
-    -ms-transition: margin 1s;
-    -o-transition: margin 1s;
     margin-top: 1%;
 }
 
@@ -124,8 +98,8 @@ header h1 span{
 
 .authField{
     margin-bottom: 20px;
-    min-width: 300px;
-    width: 30%;
+    max-width: 500px;
+    width: 90%;
     height: 30px;
     background: none;
     border: 1.5px solid #34495e;
@@ -150,16 +124,24 @@ nav{
 
 .nav-item{
     transition: margin 1s;
-    -webkit-transition: margin 1s;
-    -moz-transition: margin 1s;;
-    -ms-transition: margin 1s;
-    -o-transition: margin 1s;
 }
 
 .nav-link{
     text-decoration: none;
     margin: 0 15px;
     color: #7b7e81;
+}
+
+@-webkit-keyframes autofill {
+    to {
+        color: #2c3e50;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
 }
 
 @media(max-width: 1000px){
