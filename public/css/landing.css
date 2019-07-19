@@ -31,6 +31,7 @@ header h1{
     color: #2c3e50;
     font-weight: 300;
     margin-top: 10%;
+    margin-bottom: 0;
     transition: font 0.5s;
     -webkit-transition: font 0.5s;  
     -moz-transition: font 0.5s;  
@@ -78,6 +79,11 @@ header h1 span{
     -moz-transition: background-color 0.5s;  
     -ms-transition: background-color 0.5s;  
     -o-transition: background-color 0.5s;
+    -webkit-transition: margin 1s;
+    -moz-transition: margin 1s;;
+    -ms-transition: margin 1s;
+    -o-transition: margin 1s;
+    margin-top: 1%;
 }
 
 #loginBtn:hover{
@@ -152,6 +158,9 @@ nav{
     }
     #signupBtn{
         margin-top: 7%;
+    }
+    #loginBtn{
+        margin-top: 10%;
     }
     #help{
         margin-top: 5%;
