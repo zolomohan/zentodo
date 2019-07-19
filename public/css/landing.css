@@ -13,7 +13,7 @@ body{
     -o-transition: margin 1s;
     overflow: hidden;
     margin: 0 5%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif; 
     color: #34495e;  
     background-color: #ecf0f1;
 }
@@ -29,6 +29,7 @@ header{
 
 header h1{
     color: #2c3e50;
+    font-weight: 300;
     margin-top: 10%;
     transition: font 0.5s;
     -webkit-transition: font 0.5s;  
@@ -57,6 +58,8 @@ header h1 span{
 }
 
 #loginBtn{
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
     outline: none;    
     color: #2c3e50;
     font-size: 18px;
@@ -108,6 +111,8 @@ nav{
 }
 
 .nav-link{
+    text-decoration: none;
+    margin: 0 15px;
     color: #7b7e81;
 }
 
