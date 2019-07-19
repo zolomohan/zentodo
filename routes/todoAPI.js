@@ -1,7 +1,6 @@
 let express = require('express'),
-    helper = require('../helpers/todos');
-
-let router = express.Router();
+    helper = require('../helpers/todos'),
+    router = express.Router();
 
 router.route("/")
     .get(helper.getAllTodos)
