@@ -2,7 +2,7 @@ let password = $('#password'),
     confirmPassword = $('#confirmpassword');
 
 function validate(){
-    if(!(password.val() === confirmPassword.val())){
+    if(password.attr('action') === '/register' && !(password.val() === confirmPassword.val())){
         $('#dontMatch').css('display', 'block');
         confirmPassword.val('');
         return false;
