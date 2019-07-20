@@ -113,6 +113,14 @@ header h1 span{
     display: none;
 }
 
+#passwordErrorDiv{
+    text-align: center;
+}
+
+#dontMatch{
+    display: none;
+}
+
 nav{
     font-family: Questrial;
     margin-top: 7%;

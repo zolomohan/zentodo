@@ -4,8 +4,11 @@ let form = $('#form'),
     signup = $('#option-signup'),
     confirmpassword = $("#confirmpassword"),
     authBtn = $('.authBtn.filled'),
-    header = $('header')
-    help = $('#help');
+    dontMatch = $('#dontMatch');
+
+confirmpassword.keypress(function(){
+    dontMatch.css('display', 'none');
+})
 
 $('.signinBtn').click(function(){
     form.attr('action', '/login');

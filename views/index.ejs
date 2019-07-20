@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="todo, organize, tasks">
-    <link rel="stylesheet" href="/css/landing.css">
+    <link rel="stylesheet" href="/css/index.css">
     <title>zentodo</title>
 </head>
 <body>          
@@ -16,13 +16,13 @@
 
     <section id="auth">
         <button href="/login" id="mainSigninBtn" class="authBtn signinBtn">Sign <span>In</span></button>
-        <form action="/register" method="POST" id="form" class="form">
+        <form action="/register" method="POST" id="form" class="form" onsubmit="return validate();">
             <div class="authDiv"><input type="text" placeholder="Username" class="authField" name="username" required></div>
-            <div class="authDiv"><input type="password" placeholder="Password" name="password" class="authField" required></div>
-            <div class="authDiv"><input type="password" placeholder="Confirm Password" name="confirmpassword" id="confirmpassword" class="authField"></div>
+            <div class="authDiv"><input type="password" placeholder="Password" name="password" class="authField" id="password" required></div>
+            <div class="authDiv"><input type="password" placeholder="Confirm Password" id="confirmpassword" class="authField"></div>
+            <p id="dontMatch">Passwords Don't Match</p>
             <button class="authBtn filled">Sign Up</button>
         </form>
-
         <p class="altOption" id="option-signup">Not a member? <a id="altOptionSignup" class="altOptionBtn">Join Now</a></p>
         <p class="altOption" id="option-signin">Already a member? <a id="altOptionlogin" class="altOptionBtn signinBtn">Sign In</a></p>
     </section>
@@ -39,4 +39,5 @@
 </body>
     <script src="/js/jQuery.3.1.1.min.js"></script>
     <script src="/js/toggle.js"></script>
+    <script src="/js/confirmPassword.js"></script>
 </html>
