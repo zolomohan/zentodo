@@ -145,26 +145,25 @@ li span{
     }
 }
 
-@media(max-width: 540px){
-    header h1{
-        margin-top: 20%;
+@media(max-width: 540px){   
+    .sticky{
+        position: relative;
     }
 }
 
 @media(max-width: 450px){
     header h1{
-        margin-top: 20%;
         font-size: 62px;
         line-height: 110%;
     }
     .task{
         font-size: 15px;
     }   
+    
 }
 
 @media(max-width: 380px){
     header h1{
         font-size: 55px;
-        margin-top: 15%;
     }    
 }
