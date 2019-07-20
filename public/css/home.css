@@ -127,6 +127,37 @@ li span{
     user-select: none;
 }
 
+li #loadingContainer{
+    margin-right: 30px;
+}
+
+.lazyloader {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-top: 12px;
+    -webkit-animation: loader-rotation .8s infinite linear;
+    animation: loader-rotation .8s infinite linear;
+    border-left: 3px solid rgba(114, 144, 182, 0.15);
+    border-right: 3px solid rgba(114, 144, 182, 0.15);
+    border-bottom: 3px solid rgba(114, 144, 182, 0.15);
+    border-top: 3px solid rgba(114, 144, 182, 0.8);
+    border-radius: 100%;
+}
+
+@-webkit-keyframes loader-rotation {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes loader-rotation {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+
 
 @media(max-height: 568px){
     header h1{
