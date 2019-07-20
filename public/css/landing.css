@@ -22,7 +22,7 @@ header{
 header h1{
     color: #2c3e50;
     font-weight: 300;
-    margin-top: 10%;
+    margin-top: 13%;
     margin-bottom: 0;
     transition: font 0.5s;
     -webkit-transition: font 0.5s;  
@@ -123,7 +123,7 @@ nav{
 }
 
 .nav-item{
-    transition: margin 1s;
+    transition: margin 1s;  
 }
 
 .nav-link{

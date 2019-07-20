@@ -1,23 +1,21 @@
 $('.signinBtn').click(function(){
+    $('#form').attr('action', '/login');
     $('#mainSigninBtn').css('display','none')
-    $('#registerForm').css('display', 'none');
+    $("#confirmpassword" ).css('display','none')
+    $("#confirmpassword" ).removeAttr('required')
     $('#option-signin').css('display','none');
     $('#option-signup').css('display','block');
-    $('#loginForm').css('display','block');
+    $('#form').css('display','block');
+    $('.authBtn.filled').text('Sign In')
 })
 
 $('#altOptionSignup').click(function(){
+    $('#form').attr('action', '/register');
+    $('#form').css('display','block');
+    $("#confirmpassword" ).css('display','inline')
+    $("#confirmpassword" ).attr('required', 'true')
     $('#mainSigninBtn').css('display','none')
-    $('#loginForm').css('display','none');
     $('#option-signup').css('display','none');
     $('#option-signin').css('display','block');
-    $('#registerForm').css('display', 'block');
-})
-
-$('#regPassword').keypress(function(event){
-    console.log($('#regPassword').val());
-    if(event.which == 13){
-        $('#password').val($('#regPassword').val()); 
-        console.log($('#password').val());
-    }
+    $('.authBtn.filled').text('Sign Up')
 })

@@ -19,8 +19,8 @@ router.get("/home", isLoggedIn ,function(req, res){
 
 router.post("/register", function(req, res){
     db.User.register(new db.User({
-        username: req.body.regUsername
-    }), req.body.regPassword, function(error, user){
+        username: req.body.username
+    }), req.body.password, function(error, user){
         console.log(req.body.regPassword);
         if(error) {
             console.log(error);
