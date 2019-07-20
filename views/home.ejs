@@ -5,24 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%=user.username%> | Home</title>
+    <link rel="stylesheet" href="/lib/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/lib/fontawesome/css/solid.min.css">
     <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <header>
-        <h1>zen<span>todo</span></h1>
-        <a href="/logout">logout</a>
-    </header>
+    <div class='sticky'>
+        <header>
+            <h1>zen<span>todo</span></h1>
+            <a href="/logout">logout</a>
+        </header>
+        <section class="form">
+            <input type="text" id="todoInput" placeholder="Enter Your Task..." maxlength="65">
+        </section>
+    </div>
 
-    <section class="form">
-        <input type="text" id="todoInput" placeholder="Enter Your Task...">
-    </section>
+    
 
     <ul class="list">
         <% user.todos.forEach(function(todo){ %>
-            <li class="task <% if(todo.completed === true){ %> done <%}%>" id="<%= todo.id %>"><%=todo.todo%> <span><img src="trash-alt-solid.svg" alt="x"></span> </li>
+            <li class="task <% if(todo.completed === true){ %> done <%}%>" id="<%= todo.id %>"><%=todo.todo%> <span><i class="fas fa-trash-alt"></i></span> </li>
         <% })%>
     </ul>
 </body>
 <script src="/js/jQuery.3.1.1.min.js"></script>
 <script src="/js/app.js"></script>
+<script src="/js/checkMobile.js"></script>
 </html>

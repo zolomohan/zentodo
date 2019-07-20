@@ -18,7 +18,7 @@ $(document).ready(function(){
 })
 
 function addTodo(todo){
-    let newTodo =  $('<li class="task" id='+todo._id+'>' + todo.todo + '<span>x</span></li>');
+    let newTodo =  $('<li class="task" id='+todo._id+'>' + todo.todo + '<span><i class="fas fa-trash-alt"></i></span></li>');
     newTodo.data("completed", todo.completed);
     if(todo.completed) newTodo.addClass('done');
     $('.list').append(newTodo)

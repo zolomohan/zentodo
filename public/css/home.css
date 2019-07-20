@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300i,400,700&display=swap');
 body{
     transition: margin 1s;
-    margin: 0 3%;
     overflow-x: hidden;
     background-color: #ecf0f1;
     font-family: 'Montserrat', sans-serif; 
@@ -11,10 +10,20 @@ header{
     text-align: center;
 }
 
+.sticky{
+    padding-top: 2%;
+    z-index: 5;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: #ecf0f1;
+}
+
 header h1{
+    background: #ecf0f1;
     font-size: 64px;
     font-weight: 300;
-    margin: 3% 0;
+    margin: 0;
     color: #2c3e50;
     transition: font 0.5s;
     transition: margin 1s;
@@ -93,7 +102,7 @@ header a{
     font-size: 20px;
     padding: 0 20px;
     color: #34495e;
-    transition: all 0.3s ease;
+    transition: all 0.1s linear;
 }
 
 .task:hover{
@@ -114,12 +123,15 @@ header a{
 li span{
     float: right;
     transition: all 0.1s;
-    opacity: 0;
+    opacity: 1;
     user-select: none;
 }
 
-li span:hover{
-    color: #e74c3c;
+
+@media(max-height: 568px){
+    header h1{
+        font-size: 40px;
+    }
 }
 
 @media(max-width: 680px){
@@ -132,15 +144,10 @@ li span:hover{
         margin-left: -2%;
     }
 }
-@media(max-height: 568px){
-    header h1{
-        font-size: 40px;
-    }
-}
 
 @media(max-width: 540px){
     header h1{
-        margin-top: 10%;
+        margin-top: 20%;
     }
 }
 
