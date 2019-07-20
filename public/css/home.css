@@ -18,10 +18,16 @@ header h1{
     color: #2c3e50;
     transition: font 0.5s;
     transition: margin 1s;
+    margin-bottom: 0;
 }
 
 header h1 span{
     font-weight: 700;
+}
+
+header a{
+    color: #787b7e;
+    text-decoration: none;
 }
 
 ::-webkit-scrollbar{
