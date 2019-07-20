@@ -14,11 +14,17 @@ header{
 header h1{
     font-size: 64px;
     font-weight: 300;
-    margin: 80px 0 25px;
+    margin: 3% 0;
     color: #2c3e50;
     transition: font 0.5s;
     transition: margin 1s;
     margin-bottom: 0;
+}
+
+img{
+    float: right;
+    margin-top: 90%;
+    width: 20px;
 }
 
 header h1 span{
@@ -54,7 +60,7 @@ header a{
 }
 
 #todoInput{
-    width: 99%;
+    width: 97%;
     height: 60px;
     background: none;
     border: none;
@@ -71,9 +77,12 @@ header a{
 }
 
 .list{
+    list-style: none;
+    padding: 0;
     max-width: 900px;
     width: 90%; 
     margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 .task{
@@ -89,8 +98,8 @@ header a{
 
 .task:hover{
     cursor: pointer;
-    background-color: rgba(158, 158, 158, 0.096);
-    border-radius: 8px;
+    background-color: rgba(42, 52, 65, 0.055);
+    border-radius: 5px;
 }
 
 .task:hover span{
@@ -104,8 +113,7 @@ header a{
 
 li span{
     float: right;
-    color: #c0392b;
-    transition: all 0.3s;
+    transition: all 0.1s;
     opacity: 0;
     user-select: none;
 }
