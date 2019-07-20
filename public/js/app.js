@@ -1,6 +1,10 @@
 $(document).ready(function(){
-    $('#todoInput').keypress(function(event){
-        if(event.which == 13) createTodo();
+    $('#todoInput').keypress(function(event){ 
+        if(event.which == 13) {
+            let todo = $(this).val().trim();
+            if(!(todo === "")) 
+                createTodo();
+        }
     })
 
     $('.list').on('click', 'span', function(event){
