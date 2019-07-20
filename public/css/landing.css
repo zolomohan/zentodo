@@ -150,13 +150,13 @@ input:-webkit-autofill {
 }
 
 @media(max-width: 900px){
-    body{
+    header h1{
         margin-top:27%;
     }
 }
 
 @media(max-width: 768px){
-    body{
+    header h1{
         margin-top:30%;
     }
     
@@ -170,6 +170,7 @@ input:-webkit-autofill {
         margin-top: 30%;
         font-size: 15px;
     }
+    
 }
 
 @media(max-width: 540px){
@@ -180,7 +181,7 @@ input:-webkit-autofill {
     .option{
         margin-top: 7%;
     }
-    #loginBtn{
+    #mainSigninBtn{
         margin-top: 10%;
     }
     #help{
@@ -202,12 +203,26 @@ input:-webkit-autofill {
         margin-top: 10%;
         font-size: 14px;
     }
+    .nav-link{
+        font-size: 13px;
+    }
+    nav{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 30%;
+    }
+    .nav-item{
+        margin: 2%;
+    }
 }
 
 @media(max-width: 380px){
     header h1{
         font-size: 55px;
         margin-top: 15%;
+    }
+    .nav-link{
+        font-size: 10px;
     }    
 }
 
