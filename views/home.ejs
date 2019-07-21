@@ -24,7 +24,7 @@
 
     <ul class="list">
         <% user.todos.forEach(function(todo){ %>
-            <li class="task <% if(todo.completed === true){ %> done <%}%>" id="<%= todo.id %>"><%=todo.todo%> <span><i class="fas fa-trash-alt"></i></span> </li>
+            <li class="task <% if(todo.completed === true){ %> done <%}%>" id="<%= todo.id %>"><%=todo.todo%> <span id="deleteIcon"><i class="fas fa-trash-alt"></i></span> </li>
         <% })%>
     </ul>
 </body>

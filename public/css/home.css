@@ -120,7 +120,7 @@ header a{
         color: #bdc3c7;
 }
 
-li span{
+li span#deleteIcon{
     float: right;
     transition: all 0.1s;
     opacity: 1;
@@ -128,7 +128,12 @@ li span{
 }
 
 li #loadingContainer{
+    float: right;
     margin-right: 30px;
+}
+
+#loaderTodoContent{
+    margin-left: 50px;
 }
 
 .lazyloader {
