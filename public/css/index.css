@@ -4,7 +4,7 @@
 body{
     transition: background 0.5s;
     transition: margin 1s;
-    overflow: hidden;
+    overflow-x: hidden;
     margin: 0 5%;
     font-family: 'Montserrat', sans-serif; 
     color: #34495e;  
