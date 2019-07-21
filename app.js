@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/views'))
 app.use(express.static(__dirname + '/public'))
 
 app.use(require('express-session')({
-    secret: "nu7KtsPjWkyY4t9nTsBBzgT1l5QIBOrh0i5ksQI6",
+    secret: process.env.SESSION || "nu7KtsPjWkyY4t9nTsBBzgT1l5QIBOrh0i5ksQI6",
     resave: false,
     saveUninitialized: false
 }));
