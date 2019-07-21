@@ -17,7 +17,6 @@ $(document).ready(function(){
     })
 
     $('.list').on('click', 'li', function(){
-        $(this).children().last().replaceWith('<span id="loadingContainer"> <span class="lazyloader"></span></span>');
         toggleTodo($(this));
     })
 })
@@ -63,18 +62,20 @@ function removeTodo(todo){
 }
 
 function toggleTodo(todo){
+    $(todo).children().last().replaceWith('<span id="loadingContainer"> <span class="lazyloader"></span></span>');
     var isDone = !todo.hasClass('done');
     var updateData = {completed: isDone};
+    todo.toggleClass('done');
     $.ajax({
         method: 'PUT',
         url: '/api/todos/'+todo.attr('id'),
         data: updateData
     })
     .then(function(){
-        todo.toggleClass('done');
         $(todo).children().last().replaceWith('<span id="deleteIcon"><i class="fas fa-trash-alt"></i></span>');
     })
     .catch(function(error){
+        todo.toggleClass('done');
         console.log(error)
     })
 }
