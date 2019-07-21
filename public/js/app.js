@@ -3,10 +3,8 @@ $(document).ready(function(){
     $('#todoInput').keypress(function(event){ 
         if(event.which == 13) {
             let todo = $(this).val().trim();
-            if(!(todo === "")){
-                addLoader();
+            if(!(todo === ""))
                 createTodo();
-            } 
         }
     })
 
@@ -21,12 +19,6 @@ $(document).ready(function(){
     })
 })
 
-function addLoader(){
-    todo = $('#todoInput').val();
-    $('#todoInput').val("");
-    $('.list').append($(`<li class="task"><div class="lazyloader"></div><span id="loaderTodoContent">${todo}</span></li>`))
-}
-
 function addTodo(todo){
     $('.list').children().last().remove();    
     let newTodo =  $(`<li class="task" id=${todo._id}>${todo.todo}<span id="deleteIcon"><i class="fas fa-trash-alt"></i></span></li>`);
@@ -36,10 +28,12 @@ function addTodo(todo){
 }
 
 function createTodo(){
+    todo = $('#todoInput').val();
+    $('#todoInput').val("");
+    $('.list').append($(`<li class="task">${todo}<span id="loadingContainer"> <span class="lazyloader"></span></span></li>`))
     $.post('/api/todos', {todo: todo})
     .then(function(todo){
         addTodo(todo);
-        $('#todoInput').val("");
     })
     .catch(function(error){
         $('.list').children().last().remove(); 

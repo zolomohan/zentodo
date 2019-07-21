@@ -132,10 +132,6 @@ li #loadingContainer{
     margin-right: 30px;
 }
 
-#loaderTodoContent{
-    margin-left: 50px;
-}
-
 .lazyloader {
     position: absolute;
     width: 30px;
