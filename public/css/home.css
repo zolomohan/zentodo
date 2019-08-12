@@ -95,9 +95,9 @@ header a {
 }
 
 .task {
+	word-break: break-all;
 	max-width: 850px;
 	min-width: 85%;
-	height: 60px;
 	line-height: 60px;
 	font-size: 20px;
 	padding: 0 20px;
