@@ -135,8 +135,7 @@ li #loadingContainer {
 .lazyloader {
 	position: absolute;
 	width: 30px;
-	height: 30px;
-	margin-top: 12px;
+	height: 30px;	
 	-webkit-animation: loader-rotation .8s infinite linear;
 	animation: loader-rotation .8s infinite linear;
 	border-left: 3px solid rgba(114, 144, 182, 0.15);
